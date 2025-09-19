@@ -1,0 +1,4 @@
+Hello from fd1
+Hello from fd2
+Hello from fd3 (dup2)
+Hello from fd4 (fcntl)

@@ -1,0 +1,3 @@
+write() writes up to count bytes to the file referenced by the file descriptor fd from the buffer starting 
+at buf. POSIX requires that a read() which can be proved to occur after a write() has returned returns the 
+new data. Note that not all file systems are POSIX conforming.

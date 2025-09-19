@@ -1,0 +1,3 @@
+Execute an infinite loop at background.
+Go to /proc directory.
+Identify all the process related information in corresponding proc directory.
