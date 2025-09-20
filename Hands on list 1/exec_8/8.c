@@ -19,9 +19,9 @@ int main(){
     fd = open("file1.txt", O_RDONLY);
     
     while(read(fd, &ch, 1) == 1){
-        write(STDOUT_FILENO, &ch, 1);
+        write(1, &ch, 1);
     }
-    write(STDOUT_FILENO, "\n", 1);
+    write(1, "\n", 1);
     close(fd);
 
     return 0;
