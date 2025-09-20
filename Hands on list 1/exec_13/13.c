@@ -15,13 +15,11 @@
 
 int main(){
     fd_set fd;
-    struct timeval timeout;
+    struct timeval timeout = {10, 0};   // {tv_sec, tv_usec}
     int ret;
 
     FD_ZERO(&fd);
     FD_SET(0, &fd);
-
-    timeout.tv_sec = 10;
 
     printf("Waiting for input for 10 seconds...\n");    
     printf("Type something and press Enter, or wait for timeout.\n");
