@@ -15,11 +15,7 @@
 
 int main(int argc, char *argv[]){
     struct stat fileStat;
-
-    if(stat(argv[1], &fileStat) < 0){
-        perror("stat");
-        exit(1);
-    }
+    stat(argv[1], &fileStat);
 
     if(S_ISREG(fileStat.st_mode)){
         printf("%s is a regular file.\n", argv[1]);
