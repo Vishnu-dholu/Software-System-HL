@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 
+// read time stamp counter
 unsigned long long rdtsc () {
     unsigned long long dst;
     __asm__ __volatile__ ("rdtsc":"=A" (dst));
