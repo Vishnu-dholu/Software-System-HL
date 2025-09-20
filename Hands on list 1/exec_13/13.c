@@ -14,25 +14,25 @@
 #include <sys/types.h>
 
 int main(){
-    fd_set readfds;
+    fd_set fd;
     struct timeval timeout;
     int ret;
 
-    FD_ZERO(&readfds);
-    FD_SET(STDIN_FILENO, &readfds);
+    FD_ZERO(&fd);
+    FD_SET(0, &fd);
 
     timeout.tv_sec = 10;
 
-    printf("Waiting for input for 10 seconds...\n");
+    printf("Waiting for input for 10 seconds...\n");    
     printf("Type something and press Enter, or wait for timeout.\n");
 
-    ret = select(STDIN_FILENO + 1, &readfds, NULL, NULL, &timeout);
+    ret = select(1, &fd, NULL, NULL, &timeout);
 
     if(ret == 0) printf("\n");
 
-    if(FD_ISSET(STDIN_FILENO, &readfds)){
+    if(FD_ISSET(0, &fd)){
         char buffer[100];
-        int n = read(STDIN_FILENO, buffer, sizeof(buffer) - 1);
+        int n = read(0, buffer, sizeof(buffer) - 1);
         if(n > 0){
             buffer[n] = '\0';
             printf("You typed -> %s\n", buffer);
@@ -57,8 +57,8 @@ You typed -> vishnu dholu
 // -> here we watch only STD_FILENO (fd=0 -> keyboard input).
 
 // FD_ZERO() and FD_SET():
-// -> FD_ZERO(&readfds) clears the set.
-// -> FD_SET(STDIN_FILENO, &readfds) adds standard input to the set.
+// -> FD_ZERO(&fd) clears the set.
+// -> FD_SET(0, &readfds) adds standard input to the set.
 
-// FD_ISSET(STDIN_FILENO, &readfds)
+// FD_ISSET(0, &fd)
 // -> checks if stdin became ready for reading.
