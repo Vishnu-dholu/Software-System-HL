@@ -19,7 +19,7 @@ int main(){
         exit(0);
     }
     else if(pid == 0){
-        sleep(150);
+        sleep(15);
         printf("child process: (PID: %d) became orphan, new parent PID: %d\n", getpid(), getppid());
         exit(0);
     }
@@ -32,5 +32,8 @@ vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_24$ gcc 24.c
 vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_24$ ./a.out 
 parent process: (PID: 188513) is exiting...
 
-
 */
+
+
+// Zombie → Parent is alive but didn’t collect child’s exit status.
+// Orphan → Parent is dead, child is still running.

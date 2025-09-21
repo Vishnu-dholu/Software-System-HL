@@ -19,7 +19,7 @@
 int main(){
     struct flock lock;
     int fd;
-    fd = open("file", O_RDWR);
+    fd = open("file.txt", O_RDWR);
     lock.l_type = F_RDLCK;
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;

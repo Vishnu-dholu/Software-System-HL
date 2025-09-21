@@ -13,26 +13,28 @@
 #include <time.h>
 #include <sys/types.h>
 
-int main(){
+int main()
+{
     pid_t pid = fork();
-
-    if(pid > 0){
+    if (pid > 0)
+    {
         printf("Parent: Child created with PID %d\n", pid);
         exit(EXIT_SUCCESS);
     }
-    else{
+    else
+    {
         printf("Child: Running as daemon (PID %d)\n", getpid());
-
-        while (1){
+        while (1)
+        {
             time_t cur_time = time(NULL);
             struct tm *t = localtime(&cur_time);
-
-            if(t->tm_hour == 12 && t->tm_min == 40){
+            if (t->tm_hour == 15 && t->tm_min == 56)
+            {
                 printf("Child: OPEN DAEMON PROCESS...\n");
                 system("./file.sh");
                 break;
             }
-            sleep(30);
+            sleep(5);
         }
     }
     return 0;
@@ -40,8 +42,8 @@ int main(){
 
 /*
 OUTPUT
-vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_30$ gcc 30.c 
-vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_30$ ./a.out 
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_30$ gcc 30.c
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_30$ ./a.out
 Parent: Child created with PID 199496
 Child: Running as daemon (PID 199496)
 vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_30$ Child: OPEN DAEMON PROCESS...

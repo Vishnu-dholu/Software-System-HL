@@ -17,14 +17,25 @@ struct sched_param p;
 
 int main(){
 	p.sched_priority = 10;
+
 	printf(" ret = %d\n", sched_setscheduler(0,SCHED_FIFO,&p));
 	printf("\nThe scheduling policy is = %d\n",sched_getscheduler(getpid()));
+
 	printf(" ret = %d\n",sched_setscheduler(0,SCHED_RR,&p));
 	printf("\nThe scheduling policy is = %d\n",sched_getscheduler(getpid()));
 }
 
 /*
 OUTPUT
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_29$ gcc 29.c 
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_29$ ./a.out 
+ ret = -1
+
+The scheduling policy is = 0
+ ret = -1
+
+The scheduling policy is = 0
+
 vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_29$ sudo ./a.out 
 [sudo] password for vishnu-dholu: 
  ret = 0
@@ -33,4 +44,9 @@ The scheduling policy is = 1
  ret = 0
 
 The scheduling policy is = 2
+
 */
+
+
+
+// sched_setscheduler (pid, policy, &param) changes the scheduling policy.

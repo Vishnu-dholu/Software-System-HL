@@ -15,7 +15,7 @@ int main(){
         printf("child process: pid=%d \t ppid=%d", getpid(), getppid());
     }
     else{
-        sleep(2500);
+        sleep(25);
     }
 }
 
@@ -28,3 +28,7 @@ child process: pid=184082 	 ppid=184081
 PID         S
 184082      Z
 */
+
+
+// Zombie → Parent is alive but didn’t collect child’s exit status.
+// Orphan → Parent is dead, child is still running.

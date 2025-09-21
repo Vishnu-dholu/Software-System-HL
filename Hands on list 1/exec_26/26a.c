@@ -22,15 +22,14 @@ int main(){
 
 /*
 OUTPUT
-vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ gcc 26a.c 
-vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ ./a.out 
+
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ gcc 26a.c -o output_a
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ ./output_a 
 Running ls -l using execlp...
-total 76
--rw-rw-r-- 1 vishnu-dholu vishnu-dholu   658 Sep  7 12:33 26a.c
--rwxrwxr-x 1 vishnu-dholu vishnu-dholu 16072 Sep  7 12:34 a.out
--rwxrwxr-x 1 vishnu-dholu vishnu-dholu 16080 Sep  1 18:37 launcher
+total 28
+-rw-rw-r-- 1 vishnu-dholu vishnu-dholu  1330 Sep  7 12:34 26a.c
 -rw-rw-r-- 1 vishnu-dholu vishnu-dholu   181 Sep  1 18:33 launcher.c
--rwxrwxr-x 1 vishnu-dholu vishnu-dholu 16032 Sep  1 18:37 myprog
 -rw-rw-r-- 1 vishnu-dholu vishnu-dholu   135 Sep  1 18:35 myprog.c
--rwxrwxr-x 1 vishnu-dholu vishnu-dholu 16072 Sep  1 18:25 output_a
+-rwxrwxr-x 1 vishnu-dholu vishnu-dholu 16072 Sep 20 18:54 output_a
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ 
 */

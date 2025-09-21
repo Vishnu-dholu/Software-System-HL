@@ -7,3 +7,15 @@ int main(int argc, char *argv[]){
 
     return 0;
 }
+
+
+/*
+OUTPUT
+
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ gcc myprog.c -o myprog
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ gcc launcher.c -o launcher
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ ./myprog Vishnu
+Hello, Vishnu!
+vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_26$ 
+
+*/

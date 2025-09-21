@@ -30,3 +30,13 @@ vishnu-dholu@omen:~/iiitb/sys_software/lab/Hands on list 1/exec_20$ ./a.out
 Current process (nice value): 0
 Current process updated priority value: 5
 */
+
+
+/*
+Nice Value Range:
+  20 → highest priority (more CPU time).
+  0 → default.
+  +19 → lowest priority (less CPU time).
+
+lower value = higher priority.
+*/

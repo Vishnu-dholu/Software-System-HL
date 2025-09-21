@@ -32,7 +32,7 @@ int main(){
 
     fd = open("record.txt", O_RDWR);
     write(fd, db, sizeof(db));
-
+ 
     close(fd);
     return 0;
 }
