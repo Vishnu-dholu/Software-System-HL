@@ -33,6 +33,8 @@ Current process updated priority value: 5
 
 
 /*
+nice() is used to set the scheduling priority (“niceness”) of a process.
+
 Nice Value Range:
   20 → highest priority (more CPU time).
   0 → default.

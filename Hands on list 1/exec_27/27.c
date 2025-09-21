@@ -94,3 +94,8 @@ total 20
 -rw-rw-r-- 1 vishnu-dholu vishnu-dholu  1425 Sep  7 14:37 27.c
 -rwxrwxr-x 1 vishnu-dholu vishnu-dholu 16376 Sep  7 14:37 a.out
 */
+
+
+
+// exec() functions are used to replace the current running process with a new program.
+// Once exec succeeds, the old code is gone → only the new program runs.

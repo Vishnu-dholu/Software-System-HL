@@ -45,3 +45,5 @@ int main(){
     close(fd);
     return 0;
 }
+
+// whence -> It tells the system the reference point for start(the offset).
